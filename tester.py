@@ -36,7 +36,7 @@ class TesterZ(unittest.TestCase):
                     self.fail(f"Could not read expected output file {expected_output_path}: {e}")
 
                 try:
-                    usrresult = result_output_path.read_text().rstrip("\n")
+                    usrresult = result_output_path.read_text().rstrip()
                 except Exception as e:
                     self.fail(f"Could not read result output file {result_output_path}: {e}")
 
